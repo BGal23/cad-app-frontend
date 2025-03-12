@@ -1,12 +1,27 @@
+import { MdAccountCircle } from "react-icons/md";
+import ThemeModeButton from "../../components/Buttons/ThemeModeButton/ThemeModeButton";
+import Container from "../../components/Container/Container";
+import Logo from "../../components/Logo/Logo";
 import NavBar from "../NavBar/NavBar";
-import {} from "./styles";
+import { StyledHeader, StyledHeaderWrapper, StyledMenuWrapper } from "./styles";
+import Headroom from "react-headroom";
 
 const Header = () => {
   return (
-    <>
-      <>Header</>
-      <NavBar />
-    </>
+    <Headroom>
+      <StyledHeader>
+        <Container>
+          <StyledHeaderWrapper>
+            <Logo />
+            <StyledMenuWrapper>
+              <NavBar />
+              <ThemeModeButton />
+              <MdAccountCircle size={"1.4em"} />
+            </StyledMenuWrapper>
+          </StyledHeaderWrapper>
+        </Container>
+      </StyledHeader>
+    </Headroom>
   );
 };
 
