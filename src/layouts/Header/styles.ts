@@ -16,5 +16,5 @@ export const StyledHeaderWrapper = styled.div`
 `;
 
 export const StyledMenuWrapper = styled(StyledHeaderWrapper)`
-  gap: 1em;
+  gap: 0.6em;
 `;

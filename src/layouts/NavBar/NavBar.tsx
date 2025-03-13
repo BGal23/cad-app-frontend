@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import navList from "../../assets/constants/navList";
 import DrawerBar from "../DrawerBar/DrawerBar";
 import { StyledLink, StyledMenuIcon, StyledNavBarWrapper } from "./styles";
@@ -6,13 +7,14 @@ import { IoMenu } from "react-icons/io5";
 
 const NavBar = () => {
   const [isOpenDrawerBar, setIsOpenDrawerBar] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
       <StyledNavBarWrapper>
         {navList.map((element) => (
           <StyledLink key={element.id} to={element.address}>
-            {element.name}
+            {t(element.name)}
           </StyledLink>
         ))}
       </StyledNavBarWrapper>

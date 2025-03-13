@@ -5,6 +5,7 @@ import Logo from "../../components/Logo/Logo";
 import NavBar from "../NavBar/NavBar";
 import { StyledHeader, StyledHeaderWrapper, StyledMenuWrapper } from "./styles";
 import Headroom from "react-headroom";
+import LanguageSwitcher from "../../components/Buttons/LanguageSwitcher/LanguageSwitcher";
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
             <StyledMenuWrapper>
               <NavBar />
               <ThemeModeButton />
+              <LanguageSwitcher />
               <MdAccountCircle size={"1.4em"} />
             </StyledMenuWrapper>
           </StyledHeaderWrapper>
