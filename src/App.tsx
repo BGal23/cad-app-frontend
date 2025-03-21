@@ -11,6 +11,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Create = lazy(() => import("./pages/Create/Create"));
 const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Login = lazy(() => import("./pages/Login/Login"));
 
 const App = () => {
   const themeMode = useSelector((state: RootState) => state.theme.mode);
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="create" element={<Create />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </ThemeProvider>
